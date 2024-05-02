@@ -10,7 +10,8 @@ class AgregarPaciente extends Component {
       nombre: '',
       edad: '',
       sexo: '',
-      enfermedad: ''
+      enfermedad: '',
+      revisado: false
     };
   }
 
@@ -24,7 +25,8 @@ class AgregarPaciente extends Component {
         nombre: this.state.nombre,
         edad: parseInt(this.state.edad), // Parseamos la edad a un número entero
         sexo: this.state.sexo,
-        enfermedad: this.state.enfermedad
+        enfermedad: this.state.enfermedad,
+        revisado: this.state.revisado
       });
       // Obtenemos los datos de la respuesta
       const { status, message } = response.data;
@@ -37,7 +39,8 @@ class AgregarPaciente extends Component {
             nombre: '',
             edad: '',
             sexo: '',
-            enfermedad: ''
+            enfermedad: '',
+            revisado: false
         })
       } else {
         // Mostramos un mensaje de error si la solicitud no es exitosa
@@ -50,9 +53,17 @@ class AgregarPaciente extends Component {
     }
   };
 
-  // Función para manejar cambios en los campos de entrada del formulario
-  handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
+  // Método para manejar cambios en los campos de entrada
+  handleChange = event => {
+    // Si el evento proviene del checkbox, actualizamos el estado de manera diferente
+    if (event.target.type === 'checkbox') {
+      
+      // Actualizamos el estado con los nuevos valores de los campos de entrada
+        this.setState({ [event.target.name]: event.target.checked }); // Caso del Checkbox de 'revisado'
+    } else {
+      
+      this.setState({ [event.target.name]: event.target.value }); // Otro tipo de dato
+    }
   };
 
   render() {
@@ -85,6 +96,17 @@ class AgregarPaciente extends Component {
             <label>Enfermedad:</label>
             {/* Campo de entrada para la enfermedad del paciente */}
             <input type="text" name="enfermedad" value={this.state.enfermedad} onChange={this.handleChange} required />
+          </div>
+          <div>
+            <label>
+              Revisado:
+              <input
+                type="checkbox"
+                name="revisado"
+                checked={this.state.revisado}
+                onChange={this.handleChange}
+              />
+            </label>
           </div>
           {/* Botón para enviar el formulario */}
           <button type="submit">Agregar Paciente</button>

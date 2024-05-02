@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Sistema de Gestión de Pacientes - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto de frontend es parte del sistema de gestión de visitas a pacientes de un asilo de ancianos por parte del Hospital 'Los Alerces'. Se integra con el backend alojado en el siguiente repositorio: [Proyecto Alerce Backend](https://github.com/jmcstoltze/proyecto_alerce_back_end).
 
-## Available Scripts
+## Tecnologías utilizadas
 
-In the project directory, you can run:
+- React.js
+- React Router DOM
+- React Validator
+- Axios (para peticiones HTTP)
+- JSX
 
-### `npm start`
+## Descripción
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+El frontend de este sistema de gestión de pacientes fue desarrollado con React.js. Utiliza el enrutador React Router DOM para la navegación dentro del sitio. Se conecta con la API RESTful del backend para realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre los datos de los pacientes almacenados en la base de datos MongoDB.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Configuración
 
-### `npm test`
+1. Clona este repositorio en tu máquina local.
+2. Instala las dependencias utilizando el comando `npm install`.
+3. Asegúrate de tener acceso al backend alojado en [Proyecto Alerce Backend](https://github.com/jmcstoltze/proyecto_alerce_back_end).
+4. Configura la URL de conexión al backend en el archivo de configuración correspondiente (usualmente en un archivo de constantes o de configuración de la API).
+5. Ajusta cualquier otra configuración necesaria según las instrucciones del backend.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requerimientos a evaluar
 
-### `npm run build`
+- Configura react-router-dom para la navegación dentro del sitio.
+- Crea las rutas de navegación con react-router-dom.
+- Conecta la API RestFul del backend con la aplicación de React utilizando Axios.
+- Crea componentes para la administración de los pacientes.
+- Valida el ingreso de datos desde el frontend con react-validator.
+- Implementa redireccionamiento de páginas.
+- Utiliza JSX para la lógica de los componentes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Componentes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+El proyecto contiene un menú de navegación y diversas páginas y componentes:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Página de inicio o home.
+- Componentes para agregar, listar y buscar pacientes.
+- Componentes específicos para actualizar o eliminar registros en la base de datos MongoDB.
 
-### `npm run eject`
+## Autor
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Jose Contreras Stoltze
